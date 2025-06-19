@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+:root{
+  /* 텍스트크기 */
+  --text_size12:12px;
+  --text_size16:16px;
+  --text-size20:20px;
+
+  /* 폰트 */
+  --text_style:"Noto Sans KR";
+  --title_text_style:"Anton";
+
+  /*영어폰트 */
+
+  /* 컬러 */
+  --main_color1:#ED1C24;
+  --main_color2:#fff;
+  --sub_color1:#C6A86B;
+  --sub_color2:#c0c0c0;
+  --text_color:#333;
+}
+
+/* 폰트 */
+/* 노토 산스 kr */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 나눔고딕 */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 안톤  */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+/* 공통서식 */
+*{margin:0px; padding:0px; scroll-behavior: smooth;}
+body{
+  font-family:"Noto Sans KR", "Nanum Gothic","Anton";
+  font-size:var(--text_size12);
+  color:var(--text_color);
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000 0%, #000 20%, #000 30%, #666 50%, #aaa 70%, #ddd 85%, #fff 100%);
+}
+h3{display: none;}
+ol, ul ,li{list-style: none; text-decoration: none;}
+a{text-decoration: none; color: var(--text_color);}
+a:hover{color:var(--main_color1); text-decoration: none;}
+
+  /* 모바일 푸터 서식 */
+  .footer_toggle{
+    width: 100%;
+    background: var(--text_color);
+    color:#fff;
+    height: 180px;
+  }
+  .footer_label{
+    font-size: 16px; font-weight: bold;
+    cursor: pointer;
+    }
+  .footer_address{
+    font-style: normal;
+    display: none;
+    margin-top: 10px;
+    transition: 0.3s;
+    font-size: 10px;
+  }
+  
+  /* 토글 서식 */
+  #mo_footer_toggle{display: none;}
+  /* 토글 클릭시  */
+  #mo_footer_toggle:checked + .footer_label + .footer_address{
+    display: block;
+  }
+  .footer_label i.fa-angle-down{ transition: 0.3s;}
+  #mo_footer_toggle:checked + .footer_label i.fa-angle-down{
+    transform: rotate(180deg);
+  }
+  
+  
+  
+  /* 하단 내비게이션 및 카피라이트 */
+  .footer_toggle> .f_gnb{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 10px;
+    padding-bottom: 20px;
+  }
+  .f_gnb li{padding-top: 10px;}
+  .f_gnb li a{color:var(--main_color2); font-size: 10px;}
+  .f_gnb li:nth-child(2) a{font-weight: bold;}
+  .f_gnb li a:hover{text-decoration: underline;}
+  
+  .copyright{text-align: center; font-size: 10px;}

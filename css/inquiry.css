@@ -1,0 +1,135 @@
+@charset "utf-8";
+:root { /* 텍스트크기 */
+ --text_size12:12px; --text_size16:16px; --text-size20:20px;
+ /* 폰트 */
+ --text_style:"Noto Sans KR"; --text_style_sub: "Nanum gothic"
+ --title_text_style:"Anton";
+ /*영어폰트 */
+
+ /* 컬러 */
+ --main_color1:#e7131a; --main_color2:#fff; --sub_color1:#C6A86B; --sub_color2:#c0c0c0; --text_color:#333; } 
+
+/* pc 해상도 */
+#m_inquiry { display: none; } 
+
+/* 탭메뉴 */
+.i_tabmenu_con { width: 1200px; margin: 20px auto; } 
+.i_tab_menu { display: flex; justify-content: center; } 
+.i_tab_menu li { padding: 10px 20px; cursor: pointer; font-size: var(--text_size16); transition: .3s; border-bottom: 1px solid #e7131a; } 
+.i_tab_menu li:hover { color: var(--main_color2); background: var(--main_color1); } 
+.i_tab_menu li.active { color: var(--main_color2); background: #e7131a; } 
+
+/* FAQ */
+#faq { width: 1200PX; margin: 0 auto; } 
+.search { width: 100%; margin: 0 auto; text-align: center; } 
+.search input { width: 200px; height: 30px; border: 1px solid var(--sub_color2); border-radius: 5px; } 
+#search_btn { color: var(--main_color1); border: 1px solid var(--main_color1); background: none; width: 50px; cursor: pointer; font-weight: normal; transform: translateY(2px); } 
+#search_btn:hover { background: var(--main_color1); color: var(--main_color2); } 
+.icon_menu { display: grid; grid-template-columns: repeat(3, auto); gap: 40px; width: fit-content; margin: 40px auto; text-align: center; font-size: var(--text_size16); } 
+.icons a:hover { color: var(--main_color1); } 
+
+/* 자주묻는 질문 */
+.faq_q { width: 270px; border: 1px solid var(--text_color); border-radius: 8px; padding: 10px 0; text-align: center; color: var(--text_color); font-size: var(--text_size16); font-weight: bold; margin: 0 auto; margin-top: 80px; } 
+.faq { width: 700px; margin: 20px auto; margin-bottom: 100px; } 
+.question_wrap { position: relative; background:var(--text_color); border-radius: 5px; padding: 20px 20px;
+ display: flex; align-items: center; justify-content: space-between; color: var(--main_color2); font-size: var(--text_size16); border-bottom: 1px solid var(--main_color2); cursor: pointer; } 
+.faq ul:last-child { margin-bottom: 30px; } 
+
+.question_wrap a { color: var(--main_color2); text-decoration: none; flex: 1; } 
+
+.faq_arrow { width: 20px; height: 20px; transition: transform 0.3s ease; } 
+
+.faq_item.active .faq_arrow { transform: rotate(180deg); } 
+
+.answer { display: none; padding: 10px 10px; line-height: 30px; font-size: var(--text_size12); font-family: var(--text_style_sub); } 
+.answer_b { color: var(--main_color1); } 
+.faq_arrow { scale: 1.5; } 
+/* 1:1문의 */
+#inquiry { width: 700px; margin: 0 auto; } 
+#inquiry div { display: flex; align-items: flex-start; } 
+#inquiry div label { font-size: 15px; font-weight: bold; } 
+#inquiry div input, #inquiry select { height: 30px; } 
+#inquiry div select, #inquiry div input, #inquiry div textarea { margin-left: 20px; margin-bottom: 20px; border: 1px solid var(--sub_color2); border-radius: 5px; } 
+#inquiry div input, #inquiry div textarea { width: 600px; } 
+#inquiry div:last-child span { position: absolute; top: 30px; } 
+#inquiry .inquiry_btn { margin-left: 468px; } 
+#inquiry .inquiry_btn input { width: 70px; cursor: pointer; border: 1px solid var(--main_color1); color: var(--main_color1); border-radius: 5px; background: var(--main_color2); } 
+#inquiry .inquiry_btn input:hover { background: var(--main_color1); color: var(--main_color2); } 
+
+/* 태블릿 해상도 */
+@media (max-width:1024px) and (min-width:768px){
+ #m_inquiry { display: none; } 
+ .i_tabmenu_con { width: 100%; margin: 20px auto; } 
+ .faq_q { width: 270px; border: 1px solid var(--sub_color1); border-radius: 8px; padding: 10px 0; text-align: center; color: var(--sub_color1); font-size: var(--text_size16); font-weight: bold; margin: 0 auto; margin-top: 80px; } 
+
+ /* FAQ */
+ #faq { width: 100%; margin: 0 auto; } 
+ .faq { width: 100%; } 
+ .search { width: 100%; margin: 0 auto; text-align: center; } 
+ }
+
+/* 모바일 해상도 */
+@media (max-width:767px) {
+ #m_inquiry { display: block; } 
+ .i_tabmenu_con { transform: translateY(50px); } 
+ .mobile_top { display: flex; width: 100%; justify-content: space-around; align-items: center; padding: 10px; } 
+ .m_top { width: 1.5rem; } 
+ .mobile_top a:nth-child(2) { transform: translateX(0px); } 
+ .mobile_top div:nth-child(4) { transform: translateX(40px); } 
+ .mobile_top div:nth-child(5) { transform: translateX(-20px); } 
+ #faq { width: 100%; margin-top: 80px; } 
+ .i_tabmenu_con { width: 100%; margin: 20px auto; } 
+ .faq_q { width: 270px; border: 1px solid var(--text_color); border-radius: 8px; padding: 10px 0; text-align: center; color: var(--text_color); font-size: var(--text_size16); font-weight: bold; margin: 40px auto; } 
+ .faq_q p { display: block; } 
+ .faq { width: 100%; margin: 0 auto; } 
+ .search { width: 100%; margin: 0 auto; text-align: center; } 
+ #inquiry { width: 100%; } 
+ /* 모바일 버전 1:1문의 */
+ /* 모바일 버전 1:1문의 빼고 없애기 */
+ #inquiry div { display: none; } 
+ #m_inquiry { width: 100%; margin: 0 auto}
+ #m_inquiry { display: none; } 
+ .act { background: var(--main_color1) !important; } 
+ 
+ .i_choice, .i_category { text-align: center; margin: 50px 0; } 
+ .i_choice ul, .i_category ul { display: flex; justify-content: center; margin: 80px auto 30px auto; width: 100%; } 
+ .i_choice ul li, .i_category ul li { margin-right: 20px; } 
+ .i_choice ul a, .i_category ul a { color: var(--text_color); background: #757575; font-size: var(--text_size12); border-radius: 25px; padding: 10px 15px; color: var(--main_color2); } 
+
+ /* 문의제목 */ 
+ .input_wrap { padding: 20px; margin-top: -30px; } 
+ .m_i_input { margin: 15px 0; } 
+ .m_i_input input[type="text"],
+ .m_i_input textarea,
+ .m_i_input select { width: calc(100% - 20px); padding: 10px; border: 1px solid var(--sub_color2); border-radius: 3px; box-sizing: border-box; font-size: var(--text_size14); } 
+ .m_i_input textarea { height: 150px; } 
+ /* 전화번호 입력 */
+ .m_i_c_phone { display: flex; gap: 5px; align-items: center; } 
+ .m_i_c_phone select { width: auto; } 
+ .m_i_c_phone input[type="number"] { flex-grow: 1; } 
+ 
+ /* 이메일 입력 */
+ .m_i_c_email { display: flex; gap: 5px; align-items: center; } 
+ .m_i_c_email input[type="text"] { flex-grow: 1; } 
+ .m_i_c_email select { width: auto; } 
+ 
+ /* 개인정보 동의 체크박스 */
+ .m_i_c_check { text-align: left; margin-top: 20px; } 
+ .m_i_c_check input[type="checkbox"] { width: auto; height: auto; margin-right: 5px; } 
+ /* 약관 */
+ .privacy_content { display: none; margin-top: 10px; padding: 10px; background-color: #f9f9f9; border: 1px solid var(--sub_color2); border-radius: 5px; font-size: var(--text_size12); line-height: 1.6; font-family: var(--text_style_sub); } 
+ 
+ /* 화살표 스타일 */
+ .arrow { margin-left: 5px; font-size: 12px; transition: transform 0.3s ease; display: inline-block; vertical-align: middle; color: var(--text_color); } 
+ 
+ /* 열렸을 때 화살표 회전 */
+ .m_i_c_check.open .arrow { transform: rotate(180deg); } 
+ 
+ /* 문의하기, 취소 버튼 */
+ .m_i_c_btn { display: flex; gap: 10px; margin-top: 30px; } 
+ .m_i_c_btn input[type="submit"],
+ .m_i_c_btn input[type="reset"] { flex-grow: 1; padding: 10px 20px; border: 1px solid var(--sub_color2); border-radius: 5px; font-size: var(--text_size14); cursor: pointer; } 
+ .m_i_c_btn input[type="submit"] { background-color: var(--main_color1); color: var(--main_color2); border-color: var(--main_color1); } 
+ .m_i_c_btn input[type="reset"] { background-color: var(--main_color2); color: var(--text_color); } 
+ }
+

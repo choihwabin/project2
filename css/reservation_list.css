@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* reservation_list.css */
+.reservation-list { width: 600px; margin: 100px auto; height: 100vh; } 
+
+.list-title { text-align: center; font-size: 1.8rem; margin-bottom: 20px; color: #333; } 
+
+.res-list { width: 100%; border-collapse: collapse; } 
+
+.res-list thead th { background: #333; color: #fff; font-weight: normal; padding: 12px 0; } 
+
+.res-list th,
+.res-list td { text-align: center; padding: 12px 10px; border-bottom: 1px solid #ddd; } 
+
+.res-list tbody tr:hover { background: #f5f5f5; } 
+
+.btn-detail { display: inline-block; padding: 6px 12px; background: #ED1C24; color: #fff; border-radius: 4px; font-size: 0.9rem; } 
+
+.btn-detail:hover { opacity: 0.8; } 
+
+.back-wrap { text-align: center; margin-top: 25px; } 
+
+.btn-back { display: inline-block; padding: 10px 24px; background: #757575; color: #fff; border-radius: 20px; font-size: 1rem; } 
+
+.btn-back:hover { opacity: 0.9; } 
+
+@media (max-width:767px){
+ .reservation-list { width: 100%; margin: 100px auto; height: 100vh; } 
+ }

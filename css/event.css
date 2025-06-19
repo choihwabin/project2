@@ -1,0 +1,77 @@
+@charset "UTF-8";/* event.css */
+
+:root { --ing: rgb(213, 29, 29); /*이벤트 진행중*/
+ --end: #495e61; /*이벤트 종료*/
+ --plan: rgb(127, 108, 66); /*이벤트 예정*/}
+
+/* 메인영역 PC */
+h2 { /* bootstrap.css 변경 */
+ font-family:"Noto Sans KR", "Nanum Gothic","Anton"; /* body 속성 미적용 */
+ font-weight: bold; margin: 0; } 
+
+/* breadcrumb */
+#breadcrumb { display: block; max-width: 1200px; width: 100%; margin: 0 auto; } 
+
+/* 이벤트 공통 */
+.date_cal, .event_top, .ev_txt { width: 100%; display: flex; align-items: center; margin: 15px 0; } 
+.date_cal, .event_top { width: 100%; } 
+.none { display: none; } 
+
+/* 날짜 선택 */
+.date_cal { justify-content: center; font-size: 20px; background: #333; padding: 39px 0; margin-top: 56px; position: relative; } 
+.date_cal > h2 { font-size: 20px; margin: 0 45px; /* bootstrap.css 변경 */
+ color: #fff; } 
+.date_cal a i.fa-chevron-left,.date_cal a i.fa-chevron-right { color: #fff; } 
+
+/* 이벤트 타이틀 및 링크 */
+#event { max-width: 1200px; width: 100%; margin: 0 auto; } 
+.event_top > h2 { font-size: 16px; width: 84%; padding-left: 10px; } 
+.event_top > a { display: inline-block; width: 8%; text-align: right; } 
+.event_top > a:last-of-type { padding-right: 10px; } 
+
+/* 이벤트 리스트 */
+.event_list { width: 100%; display: flex; flex-wrap: wrap; padding-bottom: 14px; } 
+.card { width: 31.33%; background: #eee; border-radius: 8px; margin: 1%; box-sizing: border-box; } 
+
+/* 이벤트 리스트 각각 */
+.card > .img_wrap { position: relative; padding: 2%; } 
+/* 이미지 겹쳐진 상단(진행중,종료,예정 마크) */
+.card > .img_wrap > span, .ev_txt { font-size: 12px; } 
+.card > .img_wrap > span, .card > .img_wrap img { border-radius: 5px; } 
+
+.card > .img_wrap > span { position: absolute; top: 3.5%; left: 2%; display: inline-block; width: 70px; height: 20px; text-align: center; padding: 2%; z-index: 1; color: #fff; } 
+.card > .img_wrap > span + a { display: inline-block; width: 100%; overflow: hidden; border-radius: 5px; transition: 0.5s; } 
+.ev_ing { background: var(--ing); } 
+.ev_end { background: var(--end); } 
+.ev_plan { background: var(--plan); } 
+
+/* 이벤트 이미지 */
+.card > .img_wrap img { width: 100%; } 
+
+/* 이벤트 구분 및 기한 */
+.ev_txt { justify-content: space-between; width: 96%; margin: 0 auto; padding: 0% 2% 3% 2%; } 
+
+.card > .img_wrap img:hover { transform: scale(1.05); opacity: 0.8; } 
+
+/* 태블릿 */
+@media screen and (max-width: 1024px) and (min-width: 768px){
+ .event_top > h2 { display: block; } 
+
+ .event_top > h2 { width: 80%; } 
+ .event_top > a { width: 10%; } 
+ .card { width: 48%; } 
+ }
+
+/* 모바일 */
+@media screen and (max-width: 767px){
+ .date_cal > h2, .event_top > h2 { display: block; } 
+
+ /* breadcrumb */
+ #breadcrumb { display: none; } 
+
+ .event_top > h2 { width: 68%; } 
+ .event_top > a { width: 16%; } 
+ .card { width: 98%; } 
+ .ev_txt > p { display: block !important; } 
+ .ev_txt > p > span { color: #333 !important; } 
+ }

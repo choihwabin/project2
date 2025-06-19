@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/* form.css */
+/* 로그인 및 회원가입 */
+
+/* 공통요소 */
+main { /* 중복효과 해제(임시) */
+ background: #fff; } 
+
+a { text-decoration: none; color: #333; } 
+
+a:hover { text-decoration: none; } 
+
+/* breadcrumb */
+#breadcrumb { display: block; max-width: 1200px; width: 100%; margin: 0 auto; } 
+
+/* 로그인 폼 */
+.log_form { width: 400px; margin: 30px auto; padding-bottom: 15px; } 
+
+.log_form fieldset { border: none; } 
+
+/* 타이틀 */
+.log_form legend { text-align: center; font-size: 20px; font-weight: bold; border-bottom: 0; } 
+
+/* 각 폼 요소 */
+.log_form div { margin: 15px 0; } 
+
+/* 아이디,비밀번호 입력 */
+.log_form input[type=text],
+.log_form input[type=password],
+.log_form input[type=email],
+.log_form input[type=tel] { width: 100%; padding: 8px 0; text-indent: 7px; border-radius: 5px; border: 1px solid #333; margin-top: 3px; box-sizing: border-box; } 
+
+.ltc_id,
+.ltc_pw,
+.ltc_name,
+.ltc_pw_cfm,
+.ltc_region,
+.ltc_email,
+.ltc_phone { margin: 12px 0; } 
+
+/* 아이디 저장 */
+.ltc_id_save { text-align: right; } 
+
+/* 로그인 버튼 */
+.log_form input[type=submit],
+.log_form input[type=reset],
+#id_check_btn { padding: 10px 12px; border: none; border-radius: 10px; cursor: pointer; } 
+
+.log_form input[type=submit] { background: #e7131a; border: none; color: #fff; } 
+
+.ltc_id_save+input[type=submit] { width: 100%; } 
+
+.log_form input[type=submit]:hover { opacity: 0.8; } 
+
+.log_form input[type=reset]:hover { background: #efefef; } 
+
+/* 아이디/비번찾기, 회원가입 */
+.search_join { text-align: center; margin: 20px 0; } 
+
+.search_join>a { padding-left: 5px; } 
+
+.search_join>a::after { content: ''; border-right: 1px solid #333; padding: 0 5px; } 
+
+.search_join>a:last-child:after { border-right: 0; } 
+
+/* SNS 로그인 */
+.log_form div.sns_login { text-align: center; font-size: 16px; margin-top: 40px; } 
+
+.sns_login>p { margin-bottom: 5px; } 
+
+.sns_login>a { margin: 0 5px; } 
+
+/* 회원가입 폼 */
+.imt { color: #e7131a; margin-right: 3px; } 
+
+p.imt { text-align: right; } 
+
+.log_form input[type=reset] { background: #fff; border: 1px solid #333; color: #333; box-sizing: border-box; } 
+
+.btn_wrap>input { width: 49.5%; } 
+
+/* 아이디 중복확인 버튼 */
+#id_check_btn { margin-top: 4px; padding: 5px 10px; border: 1px solid #e7131a; background: #fff; } 
+
+#id_check_btn+span { margin-left: 4px; } 
+
+#id_check_btn:hover { background: #e7131a; color: #fff; } 
+
+/* 이용약관 동의 */
+.ltc_agree i.fas { float: right; position: static; cursor: pointer; padding: 10px; } 
+
+.ltc_agree i.fa-chevron-down { transform: translate(0%, -15%); } 
+
+.ltc_agree i.fa-chevron-up { transform: translate(0%, -10%); } 
+
+#agree_txt { resize: none; width: 100%; box-sizing: border-box; font-family: 'Noto Sans KR', 'Nanum Gothic'; } 
+
+/* 태블릿 */
+@media screen and (max-width: 1024px) and (min-width: 768px) { main { width: 100%; } 
+ }
+
+/* 모바일 */
+@media screen and (max-width: 767px) { main { width: 100%; } 
+
+ .log_form { width: 90%; margin: 181px auto; } 
+
+ .log_form legend { display: none; } 
+
+ .btn_wrap>input { width: 49.3%; } 
+ }

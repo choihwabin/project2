@@ -1,0 +1,1926 @@
+@charset "UTF-8"; 
+
+/* ========================
+ [반응형 미디어 쿼리]
+ ======================== */
+
+ 
+
+/* 태블릿: 768px ~ 1023px */
+@media screen and (min-width: 755px) and (max-width: 1024px) { 
+
+ .category { 
+ margin-left: 20px !important; 
+ margin-right: auto !important; 
+ } 
+
+ /* ========================
+ 태블릿 [reservation.php]
+ ======================== */
+ .re_title_hidden { 
+ display: none; 
+ } 
+
+ .movie-selection { 
+ text-align: center; 
+ margin-bottom: 40px; 
+ } 
+
+ .movie-selection > h2 { 
+ margin-top: 30px; 
+ } 
+ 
+ .slider { 
+ display: flex; 
+ align-items: center; 
+ justify-content: center; 
+ margin-top: 10px; 
+ cursor: grab; 
+ } 
+ 
+ .slider button { 
+ cursor: pointer; 
+ font-size: 24px; 
+ background: none; 
+ border: none; 
+ color: #333; 
+ width: 40px; 
+ height: 40px; 
+ } 
+ .slider button:hover { 
+ color: #C6A86B; 
+ } 
+ 
+ .slider-window { 
+ width: 572px; 
+ height: 264px; 
+ overflow: hidden; 
+ margin: 0 10px; 
+ position: relative; 
+ } 
+ 
+ .poster-list { 
+ position: absolute; 
+ top: 0; 
+ left: 0; 
+ list-style: none; 
+ display: flex; 
+ margin: 0; 
+ padding: 0; 
+ transition: transform 0.3s ease; 
+ } 
+ 
+ .poster-list li { 
+ width: 183px; 
+ height: 264px; 
+ margin-right: 10px; 
+ overflow: hidden; 
+ cursor: pointer; 
+ border: 2px solid #fff; 
+ flex-shrink: 0; 
+ } 
+ .poster-list li.selected { 
+ border-color: #ED1C24; 
+ } 
+ .poster-list li img { 
+ width: 100%; 
+ height: 100%; 
+ -o-object-fit: cover; 
+ object-fit: cover; 
+ } 
+ 
+ /* 선택영역(날짜/시간, 지역, 스페셜관) */
+ .selection-area { 
+ width: 100%; 
+ display: flex; 
+ justify-content: center; 
+ gap: 5px; 
+ margin: 0px auto; 
+ } 
+ 
+ .selection-box { 
+ width: 30%; 
+ background: #333333; 
+ color: #fff; 
+ border: 1px solid #ccc; 
+ padding: 15px; 
+ border-radius: 10px; 
+ box-sizing: border-box; 
+ position: relative; 
+ } 
+ .selection-box h3 { 
+ margin-top: 0; 
+ } 
+ 
+ .selected-display { 
+ margin-top: 10px; 
+ font-weight: bold; 
+ } 
+ 
+ /* 달력에서 선택된 날짜 스타일 */
+ #calendar-grid .selected-date { 
+ background-color: red !important; 
+ color: white !important; 
+ border-radius: 50%; 
+ } 
+ 
+ /* scroll-list */
+ .scroll-list { 
+ max-height: 100px; 
+ overflow-y: auto; 
+ border: 1px solid #555; 
+ border-radius: 5px; 
+ background: #fff; 
+ margin-top: 5px; 
+ } 
+ .scroll-list ul { 
+ list-style: none; 
+ margin: 0; 
+ padding: 0; 
+ } 
+ .scroll-list li { 
+ margin-bottom: 5px; 
+ cursor: pointer; 
+ padding: 3px 5px; 
+ color: #333; 
+ } 
+ .scroll-list li:hover { 
+ background: #f0f0f0; 
+ } 
+ 
+ /* 지역/스페셜관 선택 */
+ .selected-region { 
+ background-color: #ED1C24; 
+ color: #ffffff !important; 
+ } 
+ 
+ .selected-special { 
+ background-color: #ED1C24; 
+ color: #ffffff !important; 
+ } 
+ 
+ /* 날짜/시간 선택 (캘린더) */
+ #calendar-container { 
+ text-align: center; 
+ margin-top: 10px; 
+ background: #333333; 
+ border-radius: 10px; 
+ } 
+ #calendar-container #calendar-year { 
+ font-size: 20px; 
+ font-weight: bold; 
+ margin-bottom: 5px; 
+ color: #fff; 
+ } 
+ #calendar-container #calendar-month { 
+ margin-bottom: 10px; 
+ } 
+ #calendar-container #calendar-month button { 
+ cursor: pointer; 
+ font-size: 16px; 
+ margin: 0 10px; 
+ color: #fff; 
+ background: none; 
+ border: none; 
+ } 
+ #calendar-container #calendar-month button:hover { 
+ color: #C6A86B; 
+ } 
+ #calendar-container #calendar-month #calendar-month-name { 
+ color: #fff; 
+ } 
+ #calendar-container #calendar-grid { 
+ display: grid; 
+ grid-template-columns: repeat(7, 1fr); 
+ gap: 5px; 
+ text-align: center; 
+ } 
+ #calendar-container #calendar-grid .weekday { 
+ font-weight: bold; 
+ padding: 5px; 
+ color: #fff; 
+ } 
+ #calendar-container #calendar-grid .day { 
+ width: 30px; 
+ height: 30px; 
+ margin: 0 auto; 
+ display: flex; 
+ align-items: center; 
+ justify-content: center; 
+ cursor: pointer; 
+ color: #fff; 
+ } 
+ #calendar-container #calendar-grid .day.today { 
+ background-color: #C6A86B; 
+ color: #333; 
+ border-radius: 50%; 
+ } 
+ #calendar-container #calendar-grid .day.disabled { 
+ color: #aaa; 
+ cursor: default; 
+ } 
+ 
+ /* 검색창 */
+ #regionSearch,
+ #specialSearch { 
+ width: 90%; 
+ padding: 8px; 
+ margin-bottom: 10px; 
+ border: none; 
+ border-radius: 5px; 
+ background: #C6A86B; 
+ color: #333; 
+ font-size: 1rem; 
+ } 
+ #regionSearch::-moz-placeholder, #specialSearch::-moz-placeholder { 
+ color: #333; 
+ } 
+ #regionSearch::placeholder,
+ #specialSearch::placeholder { 
+ color: #333; 
+ } 
+ #regionSearch:focus,
+ #specialSearch:focus { 
+ outline: 2px solid #C6A86B; 
+ } 
+ 
+ /* 예매하기, 초기화 버튼 */
+ .button-area { 
+ text-align: center; 
+ margin-top: 20px; 
+ margin-bottom: 40px; 
+ } 
+ 
+ #bookingBtn,
+ #resetBtn { 
+ margin: 0 10px; 
+ padding: 10px 20px; 
+ cursor: pointer; 
+ font-size: 1rem; 
+ border: none; 
+ border-radius: 20px; 
+ } 
+ #bookingBtn:hover,
+ #resetBtn:hover { 
+ opacity: 0.8; 
+ } 
+ 
+ #bookingBtn { 
+ background: #ED1C24; 
+ color: #fff; 
+ } 
+ 
+ #resetBtn { 
+ background: #C0C0C0; 
+ color: #fff; 
+ } 
+ 
+ /* 팝업(모달) 영역 */
+ .popup-overlay { 
+ display: none; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ width: 100%; 
+ height: 100%; 
+ background: rgba(0, 0, 0, 0.5); 
+ justify-content: center; 
+ align-items: center; 
+ z-index: 999; 
+ } 
+ 
+ .popup { 
+ background: #333; 
+ color: #fff; 
+ padding: 20px; 
+ width: 320px; 
+ border-radius: 10px; 
+ text-align: center; 
+ } 
+ .popup h4 { 
+ margin-top: 0; 
+ margin-bottom: 15px; 
+ font-size: 1.3rem; 
+ } 
+ .popup .time-modal-container { 
+ display: flex; 
+ flex-direction: column; 
+ gap: 15px; 
+ align-items: center; 
+ margin-bottom: 20px; 
+ } 
+ .popup .time-modal-container .time-picker { 
+ position: relative; 
+ width: 120px; 
+ text-align: center; 
+ } 
+ .popup .time-modal-container .time-picker h5 { 
+ margin-bottom: 5px; 
+ font-size: 1rem; 
+ color: #fff; 
+ } 
+ .popup .time-modal-container .time-picker .display-box { 
+ width: 100%; 
+ padding: 8px; 
+ border: none; 
+ border-radius: 5px; 
+ cursor: pointer; 
+ font-size: 1rem; 
+ background: #fff; 
+ color: #333; 
+ text-align: center; 
+ } 
+ .popup .time-modal-container .time-picker .option-list { 
+ position: absolute; 
+ top: 80px; 
+ left: 0; 
+ width: 100%; 
+ max-height: 200px; 
+ overflow-y: auto; 
+ border: 1px solid #ccc; 
+ border-radius: 5px; 
+ background-color: #fff; 
+ display: none; 
+ z-index: 1000; 
+ } 
+ .popup .time-modal-container .time-picker .option-list .option { 
+ padding: 8px; 
+ cursor: pointer; 
+ text-align: center; 
+ color: #333; 
+ } 
+ .popup .time-modal-container .time-picker .option-list .option:hover { 
+ background-color: #f0f0f0; 
+ } 
+ .popup .time-modal-container .time-picker .option-list .option.selected { 
+ background-color: #ddd; 
+ } 
+ .popup #timeConfirmBtn { 
+ background: #ED1C24; 
+ color: #fff; 
+ border: none; 
+ border-radius: 20px; 
+ padding: 8px 20px; 
+ font-size: 1rem; 
+ cursor: pointer; 
+ } 
+ .popup #timeConfirmBtn:hover { 
+ opacity: 0.8; 
+ } 
+
+ /* ========================
+ 태블릿 [now_showing.php]
+ ======================== */
+
+ /* 1) 토탈 배너 컨테이너 보이기 & 폭 꽉 채우기 */
+ #top-banner { 
+ display: block !important; /* 혹시 숨겨졌다면 다시 보이게 */
+ width: 100%; 
+ height: 195px; /* 적당한 높이(px)로 조정 */
+ margin: 16px auto 30px; /* 하단 간격 */
+ overflow: hidden; 
+ position: relative; 
+ } 
+
+/* 2) 슬라이드 래퍼/ul/li/a 모두 높이 100% */
+.mslide-banner,
+.mslide-banner ul,
+.mslide-banner ul li,
+.mslide-banner ul li a { 
+ display: block; 
+ width: 100%; 
+ height: 100%; 
+ } 
+
+/* 3) ul을 flex로, 각 li는 화면 1장 분량 */
+.mslide-banner ul { 
+ display: flex; 
+ margin: 0; 
+ padding: 0; 
+ list-style: none; 
+ } 
+.mslide-banner ul li { 
+ flex: 0 0 100%; 
+ } 
+
+/* 4) 이미지 꽉 채워 보이기 */
+.mslide-banner ul li img { 
+ display: block; 
+ width: 100%; 
+ height: 100%; 
+ object-fit: cover; 
+ object-position: center center; 
+ } 
+
+ /* 5) 화살표 크기/위치 */
+ .mslide-banner i.fa-angle-left,
+ .mslide-banner i.fa-angle-right { 
+ position: absolute; 
+ top: 50%; 
+ transform: translateY(-50%); 
+ font-size: 2rem; 
+ padding: 10px; 
+ z-index: 10; 
+ } 
+ .mslide-banner i.fa-angle-left { left: 10px; } 
+ .mslide-banner i.fa-angle-right { right: 10px; } 
+
+
+ 
+ /* Now Showing 슬라이드 */
+
+ #showing { 
+ margin-top: 70px; 
+ } 
+ 
+ #showing h2 { 
+ font-size: var(--text-size20, 20px); 
+ font-weight: bold; 
+ font-family: var(--text_style, "Noto Sans KR"), sans-serif; 
+ margin-bottom: 20px; 
+ text-align: center; 
+ } 
+ 
+ #showing .showing-track { 
+ width: 600px; 
+ height: 400px; 
+ padding: 80px 20px; 
+ position: relative; 
+ overflow: visible; 
+ margin:21px auto 20px auto; 
+ } 
+ 
+ #showing .slide { 
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform-origin: center bottom; 
+ transition: all 0.6s ease; 
+ opacity: 0; 
+ z-index: 1; 
+ } 
+ 
+ #showing .slide.center { 
+ transform: translate(-50%, -50%) scale(1); 
+ opacity: 1; 
+ z-index: 5; 
+ } 
+ 
+ #showing .slide.left1 { 
+ transform: translate(-140%, -50%) scale(0.8); 
+ opacity: 1; 
+ z-index: 4; 
+ } 
+ 
+ #showing .slide.left2 { 
+ transform: translate(-280%, -50%) scale(0.6); 
+ opacity: 1; 
+ z-index: 3; 
+ } 
+ 
+ #showing .slide.right1 { 
+ transform: translate(40%, -50%) scale(0.8); 
+ opacity: 1; 
+ z-index: 4; 
+ } 
+ 
+ #showing .slide.right2 { 
+ transform: translate(180%, -50%) scale(0.6); 
+ opacity: 1; 
+ z-index: 3; 
+ } 
+ 
+ #showing .slide.center img { 
+ width: 300px; /* 400px → 300px */
+ height: 470px; /* 570px → 470px */
+ } 
+ #showing .slide.left1 img,
+ #showing .slide.right1 img { 
+ width: 217px; /* 317px → 217px */
+ height: 351px; /* 451px → 351px */
+ } 
+ #showing .slide.left2 img,
+ #showing .slide.right2 img { 
+ width: 130px; /* 230px → 130px */
+ height: 227px; /* 327px → 227px */
+ } 
+ 
+ #showing .slide-control { 
+ margin-top: 50px; 
+ display: flex; 
+ justify-content: center; 
+ gap: 10px; 
+ } 
+ 
+ #showing .slide-control .bar { 
+ width: 50px; 
+ height: 5px; 
+ background: var(--sub_color2, #c0c0c0); 
+ cursor: pointer; 
+ border-radius: 2px; 
+ transition: 0.3s; 
+ } 
+ #showing .slide-control .bar.active { 
+ background: var(--sub_color1, #C6A86B); 
+ } 
+ /* Now Showing 슬라이드 끝 */
+ 
+ /* 롯시픽/아르떼: 3열 그리드 + 스크롤 박스 */
+ .movie-section { 
+ margin-top: 80px; 
+ margin-bottom: 80px; 
+ } 
+
+ .movie-section h2 { 
+ text-align: center; 
+ margin: 40px 0px; 
+ } 
+
+ #poster-grid { 
+ margin-bottom: 80px; 
+ } 
+ 
+ .movie-section .poster-grid { 
+ display: grid; 
+ width: 680px; 
+ /* 한 줄에 3개(고정 폭 200px) */
+ grid-template-columns: repeat(3, 200px); 
+ /* 행 간격(줄 사이) */
+ column-gap: 30px; 
+ row-gap: 20px; 
+ /* 1줄(288px) + 행 간격(20px) = 308px까지만 보이게 → 2줄째는 스크롤로 확인 */
+ max-height: 400px; 
+ overflow-y: auto; 
+ margin: 0 auto; 
+ justify-content: center; /* 수평 가운데 정렬 */
+ } 
+ 
+ /* 실제 포스터 사이즈 (200×288) */
+ .movie-section .poster-grid a img { 
+ width: 200px; 
+ height: 288px; 
+ object-fit: cover; 
+ } 
+
+ /* =========================================
+ 태블릿 [payment.php] 전용 스타일
+ ========================================= */
+.main-title { 
+ font-size: 25px; 
+ font-weight: bold; 
+ margin-bottom: 30px; 
+ text-align: center; 
+ } 
+
+/* 
+ 가운데 정렬을 위해 추가:
+ .payment-wrapper를 가로 중앙 정렬
+*/
+.payment-wrapper { 
+ width: 700px; 
+ height: 700px; 
+ margin: 0 auto; /* 추가: 가로 중앙 정렬 */
+ border: 1px solid #ddd; 
+ border-radius: 10px; 
+ display: flex; 
+ flex-direction: column; 
+ padding: 40px; 
+ box-sizing: border-box; 
+ margin-bottom: 60px; 
+ } 
+.payment-wrapper .info-section,
+.payment-wrapper .coupon-section,
+.payment-wrapper .paymethod-section,
+.payment-wrapper .accumulate-section,
+.payment-wrapper .amount-section { 
+ margin-bottom: 35px; 
+ } 
+.payment-wrapper .movie-label { 
+ font-size: 16px; 
+ color: #333; 
+ margin-bottom: 5px; 
+ font-weight: normal; 
+ } 
+.payment-wrapper .movie-value { 
+ font-size: 20px; 
+ font-weight: bold; 
+ color: #000; 
+ margin-bottom: 20px; 
+ } 
+.payment-wrapper .info-row { 
+ display: flex; 
+ gap: 88px; 
+ margin-top: 20px; 
+ } 
+.payment-wrapper .info-row .info-col p.label { 
+ font-size: 16px; 
+ font-weight: normal; 
+ color: #333; 
+ margin-bottom: 5px; 
+ } 
+.payment-wrapper .info-row .info-col p.value { 
+ font-size: 20px; 
+ font-weight: bold; 
+ color: #000; 
+ } 
+.payment-wrapper .coupon-section label.coupon-lb { 
+ display: block; 
+ font-size: 16px; 
+ margin-bottom: 5px; 
+ } 
+.payment-wrapper .coupon-section select { 
+ padding: 5px; 
+ } 
+.payment-wrapper .paymethod-section label { 
+ font-size: 16px; 
+ margin-right: 10px; 
+ } 
+.payment-wrapper .paymethod-section input[type=radio] { 
+ margin-right: 5px; 
+ transform: scale(1.1); 
+ } 
+.payment-wrapper .accumulate-section label { 
+ font-size: 16px; 
+ margin-right: 10px; 
+ } 
+.payment-wrapper .accumulate-section input[type=checkbox] { 
+ margin-right: 5px; 
+ transform: scale(1.1); 
+ } 
+.payment-wrapper .amount-section { 
+ margin-top: auto; 
+ display: flex; 
+ align-items: center; 
+ justify-content: space-between; 
+ } 
+.payment-wrapper .amount-section .amount-left { 
+ display: flex; 
+ align-items: flex-end; 
+ } 
+.payment-wrapper .amount-section .amount-left .amount-title { 
+ font-size: 20px; 
+ font-weight: bold; 
+ margin-right: 30px; 
+ } 
+.payment-wrapper .amount-section .amount-left .amount-detail { 
+ display: flex; 
+ align-items: flex-end; 
+ } 
+.payment-wrapper .amount-section .amount-left .amount-detail .label-group { 
+ text-align: center; 
+ margin-right: 10px; 
+ } 
+.payment-wrapper .amount-section .amount-left .amount-detail .label-group p.top-label { 
+ font-size: 12px; 
+ color: #555; 
+ margin-bottom: 5px; 
+ } 
+.payment-wrapper .amount-section .amount-left .amount-detail .label-group p.num { 
+ font-size: 20px; 
+ font-weight: bold; 
+ color: #000; 
+ } 
+.payment-wrapper .amount-section .amount-left .amount-detail .symbol { 
+ font-size: 16px; 
+ color: #333; 
+ margin: 0 10px; 
+ } 
+.payment-wrapper .amount-section .pay-button { 
+ background: #ED1C24; 
+ color: #fff; 
+ border: none; 
+ border-radius: 4px; 
+ padding: 12px 30px; 
+ cursor: pointer; 
+ font-size: 16px; 
+ font-weight: bold; 
+ } 
+.payment-wrapper .amount-section .pay-button:hover { 
+ opacity: 0.8; 
+ } 
+
+/* =========================================
+ 태블릿 [reservation_check.php] 전용 스타일
+ ========================================= */
+
+.ticket-container { 
+ width: 607px; 
+ height: 679px; 
+ margin: 0 auto; /* 추가: 가로 중앙 정렬 */
+ background: #fff; 
+ color: #333; 
+ border-radius: 20px; 
+ position: relative; 
+ padding: 48px 84px; 
+ box-sizing: border-box; 
+ margin-bottom: 25px; 
+ } 
+.ticket-container .ticket-title { 
+ font-size: 25px; 
+ font-weight: bold; 
+ margin-bottom: 45px; 
+ } 
+.ticket-container .ticket-id { 
+ position: absolute; 
+ top: 48px; 
+ right: 242px; 
+ font-size: 14px; 
+ } 
+.ticket-container .poster-info-row { 
+ display: flex; 
+ gap: 45px; 
+ margin-bottom: 45px; 
+ } 
+.ticket-container .poster-info-row .poster-wrap { 
+ width: 151px; 
+ height: 217px; 
+ border: 1px solid #333; 
+ overflow: hidden; 
+ } 
+.ticket-container .poster-info-row .poster-wrap img { 
+ width: 100%; 
+ height: 100%; 
+ -o-object-fit: cover; 
+ object-fit: cover; 
+ } 
+.ticket-container .poster-info-row .info-list { 
+ margin-top: 0; 
+ margin-bottom: 0; 
+ display: flex; 
+ flex-direction: column; 
+ justify-content: center; 
+ line-height: 44px; 
+ } 
+.ticket-container .poster-info-row .info-list .info-row { 
+ font-size: 16px; 
+ } 
+.ticket-container .poster-info-row .info-list .info-row .label { 
+ color: #333; 
+ } 
+.ticket-container .poster-info-row .info-list .info-row .value { 
+ margin-left: 5px; 
+ color: #222222; 
+ font-size: 19px; 
+ } 
+.ticket-container .mobile-section { 
+ display: flex; 
+ gap: 36px; 
+ margin-bottom: 45px; 
+ } 
+.ticket-container .mobile-section .mobile-left { 
+ text-align: center; 
+ } 
+.ticket-container .mobile-section .mobile-left .mobile-label { 
+ font-size: 13px; 
+ margin-bottom: 10px; 
+ } 
+.ticket-container .mobile-section .mobile-left .qr-wrap img { 
+ width: 106px; 
+ height: 106px; 
+ } 
+.ticket-container .mobile-section .notice-box { 
+ width: 269px; 
+ height: 107px; 
+ border-radius: 5px; 
+ color: #333; 
+ padding: 0 0 0 60px; 
+ font-size: 15px; 
+ box-sizing: border-box; 
+ margin-top: 29px; 
+ } 
+.ticket-container .mobile-section .notice-box .notice-title { 
+ font-weight: bold; 
+ margin-bottom: 5px; 
+ } 
+.ticket-container .button-area { 
+ display: flex; 
+ justify-content: center; 
+ gap: 10px; 
+ } 
+.ticket-container .button-area .btn { 
+ width: 141px; 
+ height: 37px; 
+ font-size: 14px; 
+ border-radius: 18.5px; 
+ cursor: pointer; 
+ outline: none; 
+ border: none; 
+ } 
+.ticket-container .button-area .btn.btn-gray { 
+ background: #aaa; 
+ color: #fff; 
+ } 
+.ticket-container .button-area .btn.btn-change { 
+ background: #ED1C24; 
+ color: #fff; 
+ } 
+
+ } 
+
+
+/* -----------------------모바일: 최대 767px---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* 모바일: 최대 767px */
+/* 모바일: 최대 767px */
+@media screen and (max-width: 754px) { 
+ .category { 
+ width: 100% !important; 
+ margin-left: 20px !important; 
+ margin-right: auto !important; 
+ } 
+
+ /* ========================
+ [reservation.php]
+ ======================== */
+ 
+ /* .container 너비 조정 */
+ .container { 
+ width: 100%; 
+ padding: 20px 0; 
+ } 
+
+ /* 영화 선택 슬라이더 영역 줄이기 */
+ .slider-window { 
+ width: 400px; 
+ height: 220px; 
+ } 
+ .poster-list li { 
+ width: 120px; 
+ height: 180px; 
+ } 
+
+ /* selection-area 3분할 유지 (원본과 동일) */
+ .selection-area { 
+ gap: 10px; 
+ } 
+ .selection-box { 
+ width: 40%; 
+ padding: 0px; 
+ } 
+
+ /* ========================
+ [now_showing.php]
+ ======================== */
+
+ /* 1) 토탈 배너 컨테이너 보이기 & 폭 꽉 채우기 */
+ #top-banner { 
+ display: block !important; /* 혹시 숨겨졌다면 다시 보이게 */
+ width: 100%; 
+ height: 124px; /* 적당한 높이(px)로 조정 */
+ margin: 56px auto 30px; /* 하단 간격 */
+ overflow: hidden; 
+ position: relative; 
+ } 
+
+ /* 2) 슬라이드 래퍼/ul/li/a 모두 높이 100% */
+ .mslide-banner,
+ .mslide-banner ul,
+ .mslide-banner ul li,
+ .mslide-banner ul li a { 
+ display: block; 
+ width: 100%; 
+ height: 100%; 
+ } 
+
+ /* 3) ul을 flex로, 각 li는 화면 1장 분량 */
+ .mslide-banner ul { 
+ display: flex; 
+ margin: 0; 
+ padding: 0; 
+ list-style: none; 
+ } 
+ .mslide-banner ul li { 
+ flex: 0 0 100%; 
+ } 
+
+ /* 4) 이미지 꽉 채워 보이기 */
+ .mslide-banner ul li img { 
+ display: block; 
+ width: 100%; 
+ height: 100%; 
+ object-fit: cover; 
+ object-position: center center; 
+ } 
+
+ /* 5) (선택) 폰트어썸 화살표 위치 조정 */
+ .mslide-banner i.fa-angle-left,
+ .mslide-banner i.fa-angle-right { 
+ display: none; 
+ } 
+
+ 
+
+ 
+ /* Now Showing 슬라이드 */
+
+ /* Now Showing 제목 */
+ #showing > h2 { 
+ display: block; /* 혹시 숨겨져 있으면 보이게 */
+ text-align: center; /* 가운데 정렬 */
+ font-size: 1.25rem; /* 필요하다면 크기 조정 */
+ margin: 1rem 0; /* 위아래 여백 */
+ } 
+
+
+
+ #showing { 
+ margin-top: 50px; 
+ } 
+ 
+ /* #showing h2 { 
+ margin-top: 10px; 
+ } 
+ --> h2에 굳이 margin-top을 줄 필요 없으면 없애거나 줄이기
+ */
+ 
+ .showing-track { 
+ display: block; /* 또는 display: flex; */
+ width: 90%; 
+ margin: 30px auto 0; 
+ height: auto; 
+ } 
+ 
+ /* 슬라이드 각 상태별 크기/위치 */
+ #showing .slide.center img { 
+ width: 300px; /* 적절히 축소 */
+ height: 420px; 
+ } 
+ #showing .slide.left1 img,
+ #showing .slide.right1 img { 
+ width: 220px; 
+ height: 308px; 
+ } 
+ #showing .slide.left2 img,
+ #showing .slide.right2 img { 
+ width: 150px; 
+ height: 210px; 
+ } 
+ /* Now Showing 슬라이드 끝 */
+ 
+ /* 롯시픽/아르떼: 3열 그리드 + 스크롤 박스 */
+
+ /* 롯시픽/아르떼 무비 제목 */
+ .movie-section#poster-grid > h2,
+ .movie-section#arteMovie > h2 { 
+ display: block; 
+ text-align: center; 
+ font-size: 1.25rem; 
+ margin: 1rem 0; 
+ } 
+
+ .movie-section .poster-grid { 
+ display: grid; 
+ /* 한 줄에 3개(고정 폭 200px) */
+ grid-template-columns: repeat(3, 200px); 
+ /* 행 간격(줄 사이) */
+ row-gap: 20px; 
+ /* 1줄(288px) + 행 간격(20px) = 308px까지만 보이게 → 2줄째는 스크롤로 확인 */
+ max-height: 308px; 
+ overflow-y: auto; 
+ justify-content: center; /* 수평 가운데 정렬 */
+ } 
+ 
+ /* 실제 포스터 사이즈 (200×288) */
+ .movie-section .poster-grid a img { 
+ width: 200px; 
+ height: 288px; 
+ object-fit: cover; 
+ } 
+
+ 
+
+ } 
+
+
+
+/* 모바일: 최대 767px */
+/* 모바일: 최대 767px */
+/* 모바일: 최대 767px */
+@media screen and (max-width: 754px) { 
+
+ /* 만약 header, .category를 전부 숨기는 코드가 있었다면
+ .mobile_top도 함께 사라질 수 있으니 제거/수정 필요 */
+ header, .category { 
+ display: none; 
+ } 
+ /* ========================
+ 모바일 [reservation.php]
+ ======================== */
+
+
+
+ .re_title_hidden { 
+ display: none; 
+ } 
+
+ .movie-selection { 
+ margin-top: 30px; 
+ text-align: center; 
+ margin-bottom: 90px; 
+ } 
+
+ .movie-selection > h2, h3 { 
+ margin-top: 10px; 
+ margin-bottom: 10px; 
+ display: inline-block; 
+ } 
+ 
+ .slider { 
+ display: flex; 
+ align-items: center; 
+ justify-content: center; 
+ margin-top: 10px; 
+ cursor: grab; 
+ } 
+ 
+ .slider button { 
+ cursor: pointer; 
+ font-size: 24px; 
+ background: none; 
+ border: none; 
+ color: #333; 
+ width: 40px; 
+ height: 40px; 
+ } 
+ .slider button:hover { 
+ color: #C6A86B; 
+ } 
+ 
+ .slider-window { 
+ width: 572px; 
+ height: 264px; 
+ overflow: hidden; 
+ margin: 0 10px; 
+ position: relative; 
+ } 
+ 
+ .poster-list { 
+ position: absolute; 
+ top: 0; 
+ left: 0; 
+ list-style: none; 
+ display: flex; 
+ margin: 0; 
+ padding: 0; 
+ transition: transform 0.3s ease; 
+ } 
+ 
+ .poster-list li { 
+ width: 183px; 
+ height: 264px; 
+ margin-right: 10px; 
+ overflow: hidden; 
+ cursor: pointer; 
+ border: 2px solid #fff; 
+ flex-shrink: 0; 
+ } 
+ .poster-list li.selected { 
+ border-color: #ED1C24; 
+ } 
+ .poster-list li img { 
+ width: 100%; 
+ height: 100%; 
+ -o-object-fit: cover; 
+ object-fit: cover; 
+ } 
+ 
+ /* 선택영역(날짜/시간, 지역, 스페셜관) */
+ .selection-area { 
+ display: flex; 
+ justify-content: center; 
+ gap: 5px; 
+ margin: 0px 5px; 
+ } 
+ 
+ .selection-box { 
+ width: 30%; 
+ background: #333333; 
+ color: #fff; 
+ border: 1px solid #ccc; 
+ padding: 15px; 
+ border-radius: 10px; 
+ box-sizing: border-box; 
+ position: relative; 
+ margin-bottom: 90px; 
+ } 
+ .selection-box h3 { 
+ margin-top: 0; 
+ } 
+ 
+ .selected-display { 
+ margin-top: 10px; 
+ font-weight: bold; 
+ } 
+ 
+ /* 달력에서 선택된 날짜 스타일 */
+ #calendar-grid .selected-date { 
+ background-color: red !important; 
+ color: white !important; 
+ border-radius: 50%; 
+ } 
+ 
+ /* scroll-list */
+ .scroll-list { 
+ max-height: 100px; 
+ overflow-y: auto; 
+ border: 1px solid #555; 
+ border-radius: 5px; 
+ background: #fff; 
+ margin-top: 5px; 
+ } 
+ .scroll-list ul { 
+ list-style: none; 
+ margin: 0; 
+ padding: 0; 
+ } 
+ .scroll-list li { 
+ margin-bottom: 5px; 
+ cursor: pointer; 
+ padding: 3px 5px; 
+ color: #333; 
+ } 
+ .scroll-list li:hover { 
+ background: #f0f0f0; 
+ } 
+ 
+ /* 지역/스페셜관 선택 */
+ .selected-region { 
+ background-color: #ED1C24; 
+ color: #333 !important; 
+ } 
+ 
+ .selected-special { 
+ background-color: #ED1C24; 
+ color: #333 !important; 
+ } 
+ 
+ /* 날짜/시간 선택 (캘린더) */
+ #calendar-container { 
+ text-align: center; 
+ margin-top: 10px; 
+ background: #ffffff; 
+ border-radius: 10px; 
+ } 
+ #calendar-container #calendar-year { 
+ font-size: 20px; 
+ font-weight: bold; 
+ margin-bottom: 5px; 
+ color: #333; 
+ } 
+ #calendar-container #calendar-month { 
+ margin-bottom: 10px; 
+ } 
+ #calendar-container #calendar-month button { 
+ cursor: pointer; 
+ font-size: 16px; 
+ margin: 0 10px; 
+ color: #333; 
+ background: none; 
+ border: none; 
+ } 
+ #calendar-container #calendar-month button:hover { 
+ color: #C6A86B; 
+ } 
+ #calendar-container #calendar-month #calendar-month-name { 
+ color: #333; 
+ } 
+ #calendar-container #calendar-grid { 
+ display: grid; 
+ grid-template-columns: repeat(7, 1fr); 
+ gap: 5px; 
+ text-align: center; 
+ } 
+ #calendar-container #calendar-grid .weekday { 
+ font-weight: bold; 
+ padding: 5px; 
+ color: #333; 
+ } 
+ #calendar-container #calendar-grid .day { 
+ width: 30px; 
+ height: 30px; 
+ margin: 0 auto; 
+ display: flex; 
+ align-items: center; 
+ justify-content: center; 
+ cursor: pointer; 
+ color: #333; 
+ } 
+ #calendar-container #calendar-grid .day.today { 
+ background-color: #C6A86B; 
+ color: #333; 
+ border-radius: 50%; 
+ } 
+ #calendar-container #calendar-grid .day.disabled { 
+ color: #aaa; 
+ cursor: default; 
+ } 
+ 
+ /* 검색창 */
+ #regionSearch,
+ #specialSearch { 
+ width: 95%; 
+ padding: 8px; 
+ margin-bottom: 10px; 
+ border: none; 
+ border-radius: 5px; 
+ background: #C6A86B; 
+ color: #333; 
+ font-size: 1rem; 
+ } 
+ #regionSearch::-moz-placeholder, #specialSearch::-moz-placeholder { 
+ color: #333; 
+ } 
+ #regionSearch::placeholder,
+ #specialSearch::placeholder { 
+ color: #333; 
+ } 
+ #regionSearch:focus,
+ #specialSearch:focus { 
+ outline: 2px solid #C6A86B; 
+ } 
+ 
+ /* 예매하기, 초기화 버튼 */
+ .button-area { 
+ text-align: center; 
+ margin-top: 20px; 
+ margin-bottom: 40px; 
+ } 
+ 
+ #bookingBtn,
+ #resetBtn { 
+ margin: 0 10px; 
+ padding: 10px 20px; 
+ cursor: pointer; 
+ font-size: 1rem; 
+ border: none; 
+ border-radius: 20px; 
+ } 
+ #bookingBtn:hover,
+ #resetBtn:hover { 
+ opacity: 0.8; 
+ } 
+ 
+ #bookingBtn { 
+ background: #ED1C24; 
+ color: #fff; 
+ } 
+ 
+ #resetBtn { 
+ background: #C0C0C0; 
+ color: #fff; 
+ } 
+ 
+ /* 팝업(모달) 영역 */
+ .popup-overlay { 
+ display: none; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ width: 100%; 
+ height: 100%; 
+ background: rgba(0, 0, 0, 0.5); 
+ justify-content: center; 
+ align-items: center; 
+ z-index: 999; 
+ } 
+ 
+ .popup { 
+ background: #333; 
+ color: #fff; 
+ padding: 20px; 
+ width: 320px; 
+ border-radius: 10px; 
+ text-align: center; 
+ } 
+ .popup h4 { 
+ margin-top: 0; 
+ margin-bottom: 15px; 
+ font-size: 1.3rem; 
+ } 
+ .popup .time-modal-container { 
+ display: flex; 
+ flex-direction: column; 
+ gap: 15px; 
+ align-items: center; 
+ margin-bottom: 20px; 
+ } 
+ .popup .time-modal-container .time-picker { 
+ position: relative; 
+ width: 120px; 
+ text-align: center; 
+ } 
+ .popup .time-modal-container .time-picker h5 { 
+ margin-bottom: 5px; 
+ font-size: 1rem; 
+ color: #fff; 
+ } 
+ .popup .time-modal-container .time-picker .display-box { 
+ width: 100%; 
+ padding: 8px; 
+ border: none; 
+ border-radius: 5px; 
+ cursor: pointer; 
+ font-size: 1rem; 
+ background: #fff; 
+ color: #333; 
+ text-align: center; 
+ } 
+ .popup .time-modal-container .time-picker .option-list { 
+ position: absolute; 
+ top: 80px; 
+ left: 0; 
+ width: 100%; 
+ max-height: 200px; 
+ overflow-y: auto; 
+ border: 1px solid #ccc; 
+ border-radius: 5px; 
+ background-color: #fff; 
+ display: none; 
+ z-index: 1000; 
+ } 
+ .popup .time-modal-container .time-picker .option-list .option { 
+ padding: 8px; 
+ cursor: pointer; 
+ text-align: center; 
+ color: #333; 
+ } 
+ .popup .time-modal-container .time-picker .option-list .option:hover { 
+ background-color: #f0f0f0; 
+ } 
+ .popup .time-modal-container .time-picker .option-list .option.selected { 
+ background-color: #ddd; 
+ } 
+ .popup #timeConfirmBtn { 
+ background: #ED1C24; 
+ color: #fff; 
+ border: none; 
+ border-radius: 20px; 
+ padding: 8px 20px; 
+ font-size: 1rem; 
+ cursor: pointer; 
+ } 
+ .popup #timeConfirmBtn:hover { 
+ opacity: 0.8; 
+ } 
+
+ /* 2) Now Showing 슬라이드: 한 번에 3장만 보이는 구조
+ - 원하시면 좌우 포스터 크기를 좀 더 과감하게 줄여
+ 가운데-왼쪽-오른쪽 점차 작아지도록 조정 가능
+ */
+
+
+
+ 
+ /* 1) 트랙 높이 고정 (300px 예시) */
+ #showing .showing-track { 
+ position: relative; 
+ width: 100%; 
+ max-width: 600px; /* 원하시는 max 너비 */
+ height: 300px; /* ← 반드시 높이를 줘야 자식 .slide 의 top:50% 가 먹힘 */
+ margin: 0 auto 20px; 
+ overflow: visible; 
+ } 
+ 
+ /* 2) 슬라이드 기본 포지션 */
+ #showing .slide { 
+ position: absolute; 
+ top: 50%; 
+ left: 50%; 
+ transform-origin: center bottom; 
+ opacity: 0; 
+ transition: transform 0.6s ease, opacity 0.6s ease; 
+ z-index: 1; 
+ } 
+ 
+ /* 3) 가운데 포스터 */
+ #showing .slide.center { 
+ transform: translate(-50%, -50%) scale(1); 
+ opacity: 1; 
+ z-index: 5; 
+ } 
+ 
+ /* 4) 왼쪽 앞 포스터 */
+ #showing .slide.left1 { 
+ /* X% 값만 조절해보세요: 숫자를 줄이면 가운데에 붙고, 늘리면 더 왼쪽으로 */
+ transform: translate(-140%, -60%) scale(0.8); 
+ opacity: 1; 
+ z-index: 4; 
+ } 
+ 
+ /* 5) 오른쪽 앞 포스터 */
+ #showing .slide.right1 { 
+ /* 이 값을 10%~30% 사이로 조절하며 위치를 잡으시면 됩니다 */
+ transform: translate(40%, -60%) scale(0.8); 
+ opacity: 1; 
+ z-index: 4; 
+ } 
+ 
+ /* (필요하면) 뒤쪽 포스터 숨기기 */
+ #showing .slide.left2,
+ #showing .slide.right2 { 
+ display: none; 
+ } 
+ 
+ /* 6) 이미지 사이즈 */
+ #showing .slide.center img { 
+ width: 200px; /* 300px → 200px */
+ height: 290px; /* 470px → 370px */
+ } 
+ 
+ #showing .slide.left1 img,
+ #showing .slide.right1 img { 
+ width: 120px; /* 217px → 117px */
+ height: 240px; /* 351px → 251px */
+ } 
+ 
+ #showing .slide.left2 img,
+ #showing .slide.right2 img { 
+ width: 30px; /* 130px → 30px */
+ height:127px; /* 227px → 127px */
+ } 
+ 
+ /* 7) 컨트롤바 크기 */
+ #showing .slide-control { 
+ display: flex; 
+ justify-content: center; 
+ margin-top: 10px; 
+ gap: 0.5rem; 
+ margin-bottom: 60px; 
+ } 
+ #showing .slide-control .bar { 
+ width: 2.5rem; /* 40px */
+ height: 0.25rem; /* 4px */
+ background: var(--sub_color2); 
+ border-radius: 2px; 
+ cursor: pointer; 
+ transition: background 0.3s; 
+ } 
+ #showing .slide-control .bar.active { 
+ background: var(--sub_color1); 
+ } 
+
+ 
+ /* 모바일에서는 컨트롤바 3개만 보이도록 */
+ #showing .slide-control .bar:nth-child(n+4) { 
+ display: none; 
+ } 
+
+ /* 하단 3개의 컨트롤 바만 필요하다면 JS에서 slide 개수 자체를 3으로 제한하거나,
+ .slide-control .bar { display: none; } 하되 .bar:nth-child(-n+3) { display: inline-block; } 
+ 이런 식으로 조정할 수도 있습니다.
+ */
+
+ /* 3) 롯시픽/아르떼: 3열 그리드(모바일에서도 3칸) + 세로 스크롤 */
+ .movie-section .poster-grid { 
+ width: 400px; 
+ display: grid; 
+ /* 한 줄에 3개(고정 폭 약 110px) */
+ grid-template-columns: repeat(3, 110px); 
+ /* 행 간격 */
+ row-gap: 2px; 
+ column-gap: 5px; 
+ /* 1줄(216px) + 행 간격(10px) = 226px까지만 보이게 → 2줄째는 스크롤로 확인 */
+ max-height: 56vhpx; 
+ overflow-y: auto; 
+ margin: 20px auto; 
+ justify-content: center; 
+ margin-left: -10px; 
+ } 
+
+ /* 모바일용으로 좀 더 축소 (110×190) */
+ .movie-section .poster-grid a img { 
+ width: 110px; 
+ height: 190px; 
+ object-fit: cover; 
+ } 
+
+ .movie-section { 
+ margin-bottom: 60px; 
+ } 
+
+ 
+ /* 기존 reservation, selection-area 등의 반응형 처리는 
+ 아래처럼 그대로 두거나 조정
+ */
+ .selection-area { 
+ flex-direction: column; 
+ gap: 15px; 
+ margin-top: 15px; 
+ } 
+ .selection-box { 
+ width: 100%; 
+ background: #fff; 
+ color: #333; 
+ border: 1px solid #333; 
+ padding: 15px; 
+ border-radius: 5px; 
+ } 
+
+ /* 그 밖의 폰트 크기, 버튼 크기 등은 원하시면 추가 조정 */
+ #bookingBtn, #resetBtn { 
+ width: 120px; 
+ font-size: 1rem; 
+ } 
+
+
+
+ /* ========================
+ 모바일 [payment.php]
+ ======================== */
+
+ /* 제목 */
+ .main-title { 
+ font-size: 1rem; 
+ text-align: center; 
+ margin: 1rem 0; 
+ } 
+
+ /* 결제 폼 래퍼 – 양 옆 10px 여백 추가 */
+ .payment-wrapper { 
+ width: 90%; 
+ margin: 0 auto; 
+ padding: 1rem 10px; 
+ box-sizing: border-box; 
+ } 
+
+ /* 영화 / 시간 / 스페셜관 박스 */
+ .info-section { 
+ background: #fff; 
+ /* 큰 박스 테두리 제거 */
+ border: none; 
+ border-radius: 30px; 
+ padding: 0.75rem; 
+ margin-bottom: 1rem; 
+ text-align: center; 
+ } 
+ /* 맨 위 '영화' 텍스트 색 #333, 가운데 정렬 */
+ .info-section .movie-label { 
+ font-size: 1.5rem; 
+ color: #333; 
+ margin-bottom: 0.5rem; 
+ } 
+
+ /* 선택한 영화 제목 – rounded 테두리 추가 */
+ .info-section .movie-value { 
+ font-size: 1.125rem; 
+ font-weight: bold; 
+ color: #333; 
+ border: 1px solid #ccc; 
+ border-radius: 20px; 
+ padding: 0.3rem 0; 
+ width: 100%; 
+ margin: 0 auto 1rem; 
+ text-align: center; 
+ } 
+
+ /* 시간·스페셜관 열 – 간격 조정 */
+ .info-row { 
+ display: flex; 
+ gap: 0.5rem; 
+ margin-bottom: 1rem; 
+ } 
+ .info-col { 
+ flex: 1; 
+ background: none; 
+ border: none; 
+ padding: 0; 
+ text-align: center; 
+ } 
+ /* '시간'/'스페셜관' 레이블을 위에 따로, 색 #333 */
+ .info-col .label { 
+ display: block; 
+ font-size: 1.2rem; 
+ color: #333; 
+ margin-bottom: 0.25rem; 
+ } 
+ /* 선택된 시간/관 값만 테두리 */
+ .info-col .value { 
+ font-size: 1rem; 
+ font-weight: bold; 
+ color: #333; 
+ border: 1px solid #ccc; 
+ border-radius: 20px; 
+ padding: 0.3rem 0; 
+ } 
+
+ /* 롯데시네마 쿠폰 텍스트 – 가운데 정렬 */
+ .coupon-section .coupon-lb { 
+ display: block; 
+ text-align: center; 
+ font-size: 1rem; 
+ font-weight: bold; 
+ color: #333; 
+ margin: 0 auto 0.5rem auto; 
+ } 
+ /* 쿠폰 셀렉트 박스 – 너비 100% */
+ .coupon-section select { 
+ width: 95%; 
+ padding: 0.75rem; 
+ border-radius: 30px; 
+ border: 1px solid #ccc; 
+ background: #fff; 
+ font-size: 0.875rem; 
+ margin-bottom: 3rem; 
+ margin-left: 10px; 
+ } 
+
+ /* 결제수단 텍스트 – 가운데 정렬 */
+ .paymethod-section::before { 
+ content: "결제수단"; 
+ flex-basis: 100%; /* ← 추가: 헤딩이 한 줄을 차지 */
+ text-align: center; 
+ font-size: 1rem; 
+ font-weight: bold; 
+ color: #333; 
+ margin-bottom: 0.5rem; 
+ } 
+ /* 원래 텍스트 라벨은 숨기고, 입력은 감춤 */
+ .paymethod-section > label:not([for]) { display: none; } 
+ .paymethod-section input { display: none; } 
+ 
+ /* 결제수단 버튼 그룹 – 아이콘만, border 제거 */
+ .paymethod-section { 
+ display: flex; 
+ flex-wrap: wrap; /* ← 추가 */
+ justify-content: center; 
+ gap: 15px; 
+ margin-bottom: 3rem; 
+ } 
+ .paymethod-section input { display: none; } 
+ .paymethod-section label { 
+ width: 70px; 
+ height: 29px; 
+ display: inline-block; 
+ background-size: contain; 
+ background-repeat: no-repeat; 
+ background-position: center; 
+ border: none; 
+ font-size: 0; 
+ cursor: pointer; 
+ border-radius: 20px; 
+ overflow: hidden; /* ✅ 내부에서만 효과 제한 */
+ box-sizing: border-box; /* ✅ padding, border 포함한 너비 유지 */
+ transition: box-shadow 0.2s ease; 
+ } 
+ 
+ label[for="naver"] { 
+ background-image: url("../images/payment_icon/payment_01_npay.png"); 
+ } 
+ label[for="kakao"] { 
+ background-image: url("../images/payment_icon/payment_02_kakao.png"); 
+ } 
+ label[for="card"] { 
+ background-image: url("../images/payment_icon/payment_03_toss.png"); 
+ } 
+ label[for="member"] { 
+ background-image: url("../images/payment_icon/payment_04_mobilepayment.png"); 
+ } 
+ 
+ /* ✅ 선택된 label만 강조 (크기 변화 없이 그림자만) */
+ input[name="payMethod"]:checked + label { 
+ box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.863); /* 안쪽 그림자 */
+ } 
+
+ input[name="payMethod"] { 
+ display: none; 
+ } 
+ 
+ label { 
+ display: inline-block; 
+ background-size: contain; 
+ background-repeat: no-repeat; 
+ background-position: center; 
+ cursor: pointer; 
+ border-radius: 20px; 
+ } 
+ 
+
+
+ /* 포인트 적립 텍스트 – 가운데 정렬 */
+ .accumulate-section::before { 
+ content: "포인트 적립"; 
+ display: block; 
+ text-align: center; 
+ font-size: 1rem; 
+ font-weight: bold; 
+ color: #333; 
+ margin-bottom: 0.5rem; 
+ flex-basis: 100%; 
+ } 
+ /* 화면에서 숨기기용 클래스 */
+.visually-hidden { 
+ position: absolute !important; 
+ width: 1px; height: 1px; 
+ margin: -1px; padding: 0; 
+ overflow: hidden; 
+ clip: rect(0, 0, 0, 0); 
+ border: 0; 
+ } 
+
+/* 포인트 적립 텍스트 – 가운데 정렬 */
+.accumulate-section::before { 
+ content: "포인트 적립"; 
+ display: block; 
+ text-align: center; 
+ font-size: 1rem; 
+ font-weight: bold; 
+ color: #333; 
+ margin-bottom: 0.5rem; 
+ } 
+
+/* 전체 포인트 적립 영역 여백 */
+.accumulate-section { 
+ margin-bottom: 3rem; 
+ } 
+
+/* L.Point 상단 가운데 정렬 */
+.accumulate-lpoint { 
+ display: flex; 
+ justify-content: center; 
+ margin-bottom: 1rem; 
+ } 
+
+/* 하단 두 항목 가로 정렬 + 간격 */
+.accumulate-others { 
+ display: flex; 
+ justify-content: center; 
+ gap: 4rem; 
+ } 
+
+/* 체크박스 + 라벨 수평 정렬 */
+.accumulate-section label { 
+ display: flex; 
+ align-items: center; 
+ font-size: 0.9rem; 
+ gap: 0.4rem; 
+ width: 120px; 
+ margin-left: 40px; 
+ } 
+
+
+ /* 결제금액 텍스트 – 가운데 정렬 */
+ .amount-section { 
+ text-align: center; 
+ margin-bottom: 1rem; 
+ } 
+ .amount-title { 
+ display: block; 
+ font-size: 1.25rem; 
+ font-weight: bold; 
+ color: #333; 
+ margin-bottom: 0.5rem; 
+ } 
+ /* PC 버전대로 상품금액 - 할인금액 = 합계 */
+ .amount-detail { 
+ display: flex; 
+ justify-content: center; 
+ align-items: center; 
+ gap: 0.5rem; 
+ font-size: 1.2rem; 
+ color: #333; 
+ margin-bottom: 1rem; 
+ } 
+ .amount-detail .symbol { 
+ color: #999; 
+ } 
+
+ .symbol { 
+ margin-top: 20px; 
+ } 
+ /* 나머지 PC 스타일 그대로 유지 (레이블 그룹 등) */
+
+ /* 결제완료 버튼 – 금액 밑에 위치 */
+ .pay-button { 
+ display: inline-block; 
+ background: #ED1C24; 
+ color: #fff; 
+ border: none; 
+ border-radius: 4px; 
+ padding: 12px 30px; 
+ font-size: 1rem; 
+ font-weight: bold; 
+ cursor: pointer; 
+ } 
+ .pay-button:hover { 
+ opacity: 0.8; 
+ } 
+
+ /* =========================================
+ 모바일 [reservation_check.php] 전용 스타일
+ ========================================= */
+
+.ticket-container { 
+ width: 383px; 
+ height: 679px; 
+ margin: 0 auto; /* 추가: 가로 중앙 정렬 */
+ background: #fff; 
+ color: #333; 
+ border-radius: 20px; 
+ position: relative; 
+ padding: 48px 6px; 
+ box-sizing: border-box; 
+ margin-bottom: 25px; 
+ } 
+.ticket-container .ticket-title { 
+ font-size: 25px; 
+ font-weight: bold; 
+ margin-bottom: 45px; 
+ } 
+.ticket-container .ticket-id { 
+ position: absolute; 
+ top: 48px; 
+ right: 37px; 
+ font-size: 14px; 
+ } 
+.ticket-container .poster-info-row { 
+ display: flex; 
+ gap: 45px; 
+ margin-bottom: 45px; 
+ } 
+.ticket-container .poster-info-row .poster-wrap { 
+ width: 151px; 
+ height: 217px; 
+ border: 1px solid #333; 
+ overflow: hidden; 
+ } 
+.ticket-container .poster-info-row .poster-wrap img { 
+ width: 100%; 
+ height: 100%; 
+ -o-object-fit: cover; 
+ object-fit: cover; 
+ } 
+.ticket-container .poster-info-row .info-list { 
+ margin-top: 0; 
+ margin-bottom: 0; 
+ display: flex; 
+ flex-direction: column; 
+ justify-content: center; 
+ line-height: 44px; 
+ } 
+.ticket-container .poster-info-row .info-list .info-row { 
+ font-size: 16px; 
+ } 
+.ticket-container .poster-info-row .info-list .info-row .label { 
+ color: #333; 
+ } 
+.ticket-container .poster-info-row .info-list .info-row .value { 
+ margin-left: 5px; 
+ color: #222222; 
+ font-size: 19px; 
+ } 
+.ticket-container .mobile-section { 
+ display: flex; 
+ gap: 36px; 
+ margin-bottom: 45px; 
+ } 
+.ticket-container .mobile-section .mobile-left { 
+ text-align: center; 
+ } 
+.ticket-container .mobile-section .mobile-left .mobile-label { 
+ font-size: 13px; 
+ margin-bottom: 10px; 
+ } 
+.ticket-container .mobile-section .mobile-left .qr-wrap img { 
+ width: 106px; 
+ height: 106px; 
+ } 
+.ticket-container .mobile-section .notice-box { 
+ width: 269px; 
+ height: 107px; 
+ border-radius: 5px; 
+ color: #333; 
+ padding: 0 0 0 60px; 
+ font-size: 15px; 
+ box-sizing: border-box; 
+ margin-top: 29px; 
+ } 
+.ticket-container .mobile-section .notice-box .notice-title { 
+ font-weight: bold; 
+ margin-bottom: 5px; 
+ } 
+.ticket-container .button-area { 
+ display: flex; 
+ justify-content: center; 
+ gap: 10px; 
+ } 
+.ticket-container .button-area .btn { 
+ width: 141px; 
+ height: 37px; 
+ font-size: 14px; 
+ border-radius: 18.5px; 
+ cursor: pointer; 
+ outline: none; 
+ border: none; 
+ } 
+.ticket-container .button-area .btn.btn-gray { 
+ background: #aaa; 
+ color: #fff; 
+ } 
+.ticket-container .button-area .btn.btn-change { 
+ background: #ED1C24; 
+ color: #fff; 
+ } 
+
+
+
+ } 
+

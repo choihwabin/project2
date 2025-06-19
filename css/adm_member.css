@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* adm_member.css
+member_list.php의 관련된 CSS */
+
+/* 공통 */
+body { font-family: "Noto Sans KR"; } 
+a { text-decoration: none; color: #333; } 
+a:hover { color: #C6A86B; } 
+
+/* 폼 양식 */
+#adm_member { max-width:1200px; width: 100%; margin: 0 auto; } 
+#adm_member fieldset { padding: 16px 0; } 
+#adm_member legend { display: none; } 
+
+/* 테이블 */
+#adm_member table { width: 100%; border-collapse: collapse; font-size: 14px; } 
+/* 테이블 명칭 */
+#adm_member table > caption { text-align: center; line-height: 40px; font-size: 20px; font-weight: bold; } 
+/* 테이블 테두리 및 여백 */
+#adm_member table, #adm_member tr, #adm_member th, #adm_member td { border: 1px solid #ccc; } 
+#adm_member th, #adm_member td { padding: 10px 5px; } 
+/* 테이블 상단 */
+#adm_member th { background: #ED1C24d3; color: #fff; font-size: 16px; } 
+/* 테이블 내용 */
+#adm_member td:first-child { text-align: center; } 
+#adm_member tr:nth-child(2n) { background: #C6A86B38; } 
+
+/* 검색 기능 */
+.adm_search { text-align: center; padding: 10px 0; } 
+.adm_search input { padding: 6px 4px; border: 1px solid #333; border-radius: 5px; } 
+.adm_search input[type=search] { width: 300px; } 
+.adm_search input[type=submit] { width: 70px; background: #E7131a; color: #fff; cursor: pointer; } 
+
+/* 전체 리스트 수, 페이지네이션 */
+#list_n_pagenum { display: flex; align-items: center; justify-content: space-between; } 
+
+.total_list_num, .adm_pagination { padding: 15px; } 
+
+/* 페이지네이션 */
+.adm_pagination p { text-align: right; } 
+.act { color: #ED1C24; font-weight: bold; } 

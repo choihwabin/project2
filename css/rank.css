@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* rank.css */
+@keyframes cloude { 
+ 0% { transform: translateY(0); } 
+ 50% { transform: translateY(-5px); } 
+ 100% { transform: translateY(0); } 
+ }
+
+@media (min-width:1025px) {.mobile_top { display: none; } 
+.ranking { width: 100%; height: 2000px; } 
+.category { width: 1200px; margin: 0 auto; margin-bottom: 30px; } 
+
+/* 3순위 서식 */
+
+.ranking3 { width: 75rem; margin: 0 auto; } 
+.ranking3 > h2 { font-size: 30px; padding-top: 50px; text-align: center; } 
+.ranking3 > span { float: right; } 
+.ranking3 > ul { display: flex; justify-content: space-evenly; margin-top: 100px; } 
+.ranking3 > ul > li:first-child { transform: translateY(35px); } 
+.ranking3 > ul > li:last-child { transform: translateY(50px); } 
+
+.rankings .poster_rank { font-size: 30px; font-weight: bold; transform: translateY(5px); } 
+.rankings > a > img { transition: 1.3s; } 
+.rankings > a > img:hover { animation:cloude 1s ease infinite; box-shadow: 0 0 40px #ed1c24; } 
+.rankings p { margin: 15px 0px; text-align: center; line-height: 20px; } 
+.rankings p:first-child { font-size:20px; font-weight: bold; } 
+
+.bronze, .gold, .silver { border-radius: 10px 10px 0px 0px; margin-top: 10px; } 
+.bronze { border: 5px solid #B87333; padding-bottom: 15px; } 
+.gold { border: 5px solid #C6A86B; padding-bottom: 20px; padding-top: 30px; } 
+.silver { border: 5px solid #C0C0C0; } 
+
+/* 4~10 순위표 */
+.ranking10 { width: 75rem; height: 1200px; margin: 0 auto; } 
+.ranking10 > table { width: 100%; border-collapse: collapse; margin-top: 50px; } 
+.ranking10 th, .ranking10 td { text-align: center; padding: 10px; border-bottom: 1px solid #333; } 
+tbody tr td:first-child { font-size: 30px; font-weight: bold; } 
+
+tbody tr td img { transition: 0.3s; } 
+tbody tr td img:hover { transform: scale(1.1); box-shadow: 0 8px 24px #00000099, inset 0 0 12px #ed1c2426; } 
+tbody tr td:last-child a { color: #fff; background: #e7131a; padding: 5px 8px; border-radius: 20px; } 
+ }
+
+/* 태블릿 해상도 */
+@media (max-width:1024px) and (min-width:768px){
+ .mobile_top { display: none; } 
+ .ranking { width: 100%; min-width: 50%; height: auto; } 
+ .category { margin-bottom: 30px; } 
+ 
+ /* 3순위 서식 */
+ 
+ .ranking3 { width: 100%; min-width: 800px; margin: 0 auto; } 
+ .ranking3 > h2 { font-size: 1.875rem; padding-top: 50px; text-align: center; margin: 0 auto; } 
+ .ranking3 > span { float: right; } 
+ .ranking3 > ul { display: flex; margin: 100px auto 0; justify-content: space-around; flex-wrap: wrap; text-align: center; } 
+ .ranking3 > ul > li { width: 30%; min-width: 200px; } 
+ .ranking3 > ul > li:first-child { transform: translateY(35px); } 
+ .ranking3 > ul > li:last-child { transform: translateY(50px); } 
+ 
+ .rankings .poster_rank { font-size: 1.875rem; font-weight: bold; transform: translateY(5px); } 
+ .rankings p { margin: 15px 0px; text-align: center; line-height: 20px; } 
+ .rankings p:first-child { font-size:1.25rem; font-weight: bold; } 
+ 
+ .bronze, .gold, .silver { border-radius: 10px 10px 0px 0px; margin:10px auto; flex-wrap: wrap; width: 200px; box-sizing: border-box; }
+ .bronze { border: 5px solid #B87333; padding-bottom: 15px; } 
+ .gold { border: 5px solid #C6A86B; padding-bottom: 20px; padding-top: 30px; } 
+ .silver { border: 5px solid #C0C0C0; } 
+ 
+ /* 4~10 순위표 */
+ .ranking10 { width: 100%; height: 1200px; margin: 0 auto; } 
+ .ranking10 > table { width: 100%; border-collapse: collapse; margin-top: 50px; } 
+ .ranking10 th, .ranking10 td { text-align: center; padding: 10px; border-bottom: 1px solid #333; } 
+ tbody tr td:first-child { font-size: 30px; font-weight: bold; } 
+ 
+ tbody tr td:last-child a { color: #fff; background: #ED1C24; padding: 5px 8px; border-radius: 20px; } 
+ }
+
+
+/* 모바일 해상도 */
+@media (max-width:767px) and (min-width:375px) { h2 { display: none; } 
+ .ranking { width: 100%; height: auto; } 
+ .category { width: 75rem; margin: 0 auto; margin-bottom: 30px; } 
+ 
+ /* 3순위 서식 */
+ 
+ .ranking3 { width: 100%; margin: 0 auto; } 
+ .ranking3 > ul { display: flex; width: 100%; justify-content:center; } 
+ .rankings { width: 100%; margin: 30px auto; text-align: center; } 
+ .ranking3 > ul > li { width: 30%; min-width: 200px; display: flex; flex-direction: column; align-items: center; } 
+ .ranking3 > ul > li:first-child { transform: translateY(35px); } 
+ .ranking3 > ul > li:nth-child(2) { margin: 0px -30px; } 
+ .ranking3 > ul > li:last-child { transform: translateY(50px); } 
+ 
+ .rankings .poster_rank { font-size: 1.875rem; font-weight: bold; transform: translateY(5px); } 
+ .rankings > a > img { width: 100px; } 
+
+ 
+ .rankings p { text-align: center; font-size: 0.75rem; line-height: 20px; } 
+ .rankings p:first-child { font-size:1rem; font-weight: bold; } 
+ 
+ .bronze, .gold, .silver { padding: 20px; border-radius: 10px 10px 0px 0px; margin:10px auto; width: 100px; box-sizing: border-box; } 
+ .bronze { border: 5px solid #B87333; padding-bottom: 60px; } 
+ .gold { border: 5px solid #C6A86B; padding-bottom: 80px; padding-top: 30px; } 
+ .silver { border: 5px solid #C0C0C0; padding-bottom: 40px; } 
+ .silver > p > a { font-size: 13px; } 
+ 
+ /* 4~10 순위표 */
+ .ranking10 { width: 100%; height: 1200px; margin: 0 auto; } 
+ .ranking10 > table { width: 100%; border-collapse: collapse; margin-top: 50px; } 
+ .ranking10 th, .ranking10 td { text-align: center; padding: 10px; border-bottom: 1px solid #333; } 
+ tbody tr td:first-child { font-size: 1rem; font-weight: bold; } 
+
+ tbody tr td:last-child a { color: #fff; background:#e7131a; padding: 1px 1px; border-radius: 20px; font-size: 0.75rem; } 
+ }

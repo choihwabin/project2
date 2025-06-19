@@ -1,0 +1,51 @@
+DB 테이블 설계
+------------------
+
+
+
+[예매하기]
+CREATE TABLE reservations (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  movie VARCHAR(255) NOT NULL,
+  date DATE NOT NULL,
+  time TIME NOT NULL,
+  region VARCHAR(255) NOT NULL,
+  special VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+****
+ 테이블 컬럼만 한 번 추가
+
+ALTER TABLE reservations
+  ADD COLUMN mb_id VARCHAR(25) NOT NULL AFTER id,
+  ADD INDEX idx_res_mb (mb_id);
+
+---------------------------------------------------
+
+[ 이벤트 ] (event_mg.php 기록 동)
+=> 2025.04.16 12PM 기준 등록만 가능 (수정/삭제 기능은 미구현)
+=> 2025.04.21 12PM 형식의 제한숫자(name) 변경
+CREATE TABLE ltc_event (
+    no int(10) not null auto_increment primary key,
+    ev_name varchar(255) not null, 
+    ev_cate varchar(50) not null, 
+    ev_img varchar(100) not null, 
+    ev_start int(10) not null, 
+    ev_limit int(10) not null,
+    ev_datetime datetime default current_timestamp()
+    );
+
+[ 로그인 / 회원가입 ]
+CREATE TABLE ltc_member (
+    no int(10) not null auto_increment primary key,
+    mb_name varchar(25) not null, 
+    mb_id varchar(25) not null, 
+    mb_password varchar(255) not null, 
+    mb_region varchar(255) not null, 
+    mb_email varchar(255) not null,
+    mb_phone varchar(13) not null,
+    mb_datetime datetime default current_timestamp()
+    );
+

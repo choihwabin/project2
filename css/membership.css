@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* membership.css */
+
+
+h2, h3 { font-family: "Noto Sans KR"; } 
+
+/* breadcrumb */
+#breadcrumb { display: block; max-width: 1200px; width: 100%; margin: 0 auto; } 
+
+/* 멤버십 */
+.ms { width: 100%; max-width: 1200px; margin: 0 auto 20px auto; } 
+.ms > h2 { font-weight: bold; font-size: 20px; text-align: center; color: #fff; } 
+
+/* 멤버십 등급 */
+.ms_grade { width: 100%; display: flex; text-align: center; justify-content: space-evenly; } 
+.ms_grade > .grade { width: 20%; background: #fff; padding: 15px; margin: 15px 0 20px 0; border-radius: 5px; } 
+.ms_grade img { height: 32px; /*4개 이미지 중 제일 최소 사진 높이 크기 16px 기준*/}
+.ms_grade > .grade > span { display: block; border-radius: 5px; padding: 5px 10px; margin-top: 15px; color: #fff; font-weight: normal; text-transform: uppercase; } 
+
+/* 멤버십 등급별 색상 */
+.ms_grade > .gr_vip > span, .ms_info_content th:nth-child(2) { background: #675448; /*롯데시네마 지정컬러*/}
+.ms_grade > .gr_vvip > span, .ms_info_content th:nth-child(3) { background: #757575; /*롯데시네마 지정컬러*/}
+.ms_grade > .gr_gold > span, .ms_info_content th:nth-child(4) { background: #756023; /*롯데시네마 지정컬러*/}
+.ms_grade > .gr_platinum > span, .ms_info_content th:last-child { background: #000; /*롯데시네마 지정컬러*/}
+
+/* 멤버십 여닫이 */
+.ms_info { width: 98%; margin: 1px auto; box-sizing: border-box; } 
+
+/* 각 멤버십 제목 및 내용 */
+.ms_info .ms_info_title, .ms_info .ms_info_content { border-radius: 5px; } 
+
+/* 각 멤버십 제목 */
+.ms_info .ms_info_title { font-size: 16px; display: flex; background: #333; align-items: center; justify-content: space-between; padding: 5px 0 5px 10px; color: #fff; cursor: pointer; } 
+.ms_info_title > i { padding: 10px; } 
+
+/* 각 멤버십 내용 */
+.ms_info .ms_info_content { background: #fff; font-size: 12px; /* 스크롤시 */
+ max-height: 0; overflow: hidden; transition: all 0.5s; } 
+
+.ms_info_content > ul > li { line-height: 24px; text-transform: uppercase; } 
+.ms_info_content > ul > li::before { content: '\2022 \0020'; } 
+
+/* active */
+.active { height: auto; } 
+.active_info_content { padding: 8px; text-indent: 5px; } 
+.rotate { transform: rotate(180deg); } 
+
+
+/* VIP 혜택 서식(테이블) */
+.ms_info_content > table { width: 100%; border-collapse: collapse; } 
+.ms_info_content > table, .ms_info_content tr, .ms_info_content th, .ms_info_content td { border: 1px solid #ccc; text-align: center; padding: 7px 3px; font-size: 12px; } 
+.ms_info_content caption { display: none; } 
+
+.ms_info_content th { width: 15%; color: #fff; } 
+.ms_info_content td.coup_bo, .ms_info_content td.coup_opt, .ms_info_content td.coup { background: #fafafa; font-weight: bold; font-size: 14px; } 
+.ms_info_content .vip_table { width: 40%; } 
+.ms_info_content td.coup_bo { width: 20%; color: #C6A86B; } 
+.ms_info_content td.coup_bo > small { font-weight: normal; color: #333; } 
+.ms_info_content td.coup_opt { width: 5%; background: #FF7787; /*롯데시네마 적용 컬러*/
+ color: #fff; } 
+
+.ms_info_content .ms_con { margin: 10px 0; } 
+
+/* 태블릿 */
+@media screen and (max-width: 1024px) and (min-width: 768px){
+ .ms_grade { flex-wrap: wrap; } 
+ .ms_grade > .grade { width: 35%; } 
+ }
+
+/* 모바일 */
+@media screen and (max-width: 767px){
+ #breadcrumb { display: none; color: #f00; } 
+
+ .ms_grade { flex-wrap: wrap; margin-top:64px; } 
+ .ms_grade > .grade { width: 85%; } 
+ }
